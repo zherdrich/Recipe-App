@@ -1,6 +1,6 @@
 .HomePage .filterSection {
-    border: 2px solid black;
-    margin-top: 30px;
-    width: 500px;
-
+  border: 2px solid black;
+  margin-top: 30px;
+  width: 500px;
+  margin: auto;
 }

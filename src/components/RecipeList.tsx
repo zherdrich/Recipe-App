@@ -14,5 +14,3 @@ export default function RecipeList({ mealData }: RecipeListProps) {
     </div>
   );
 }
-
-// for when i get back: need to find the interface stuff to fix errors

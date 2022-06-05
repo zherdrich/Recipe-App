@@ -59,7 +59,7 @@ export interface recipeInterface {
   uri: string;
 }
 
-export default interface oldRecipe {
+export default interface oldecipe {
   from: number;
   to: number;
   count: number;
