@@ -1,6 +1,8 @@
-.HomePage .filterSection {
-  border: 2px solid black;
-  margin-top: 30px;
-  width: 500px;
-  margin: auto;
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+.search {
+  height: 20px;
+  width: 400px;
 }

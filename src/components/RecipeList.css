@@ -1,0 +1,21 @@
+.recipelist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.featuredRecipes {
+  color: #8d9b6a;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #909e84;
+  font-weight: 400;
+  text-align: center;
+}
+.recipeItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.recipeItems img {
+  width: 300px;
+  margin-bottom: 10px;
+}

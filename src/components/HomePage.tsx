@@ -1,14 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Recipe } from "../models/id-model";
-import getRecipes from "../services/getRecipe";
+import getRecipes, { getRandomRecipes } from "../services/getRecipe";
 import Filters from "./Filters";
 import "./HomePage.css";
 import RecipeList from "./RecipeList";
 
-// use effect calls the function from getID
 export default function HomePage() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [mealData, setMealData] = useState<Recipe[]>([]);
+
+  //https://css-tricks.com/run-useeffect-only-once/#aa-the-trick-is-that-useeffect-takes-a-second-parameter
+  useEffect(() => {
+    getRandomRecipes().then((data) => {
+      if (data) {
+        setMealData(data);
+      }
+    });
+  }, []);
 
   function search() {
     getRecipes(searchInput).then((data) => {
@@ -22,6 +30,7 @@ export default function HomePage() {
     <div className="HomePage">
       <div className="searchBar">
         <input
+          className="search"
           id="searchbar"
           type="text"
           onChange={(e) => {

@@ -1,3 +1,23 @@
 .Header {
-    border-bottom: 2px solid grey;
+  background-color: #8d9b6a;
+  height: 60px;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header h1 {
+  color: #e8dfe0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #8f5b34;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 25px;
+}
+.seedling {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }

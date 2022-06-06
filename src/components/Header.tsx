@@ -1,9 +1,10 @@
-import "./Header.css"
+import "./Header.css";
 
-export default function Header () {
-    return (
-        <div className="Header">
-            <h1>Food Recipe Website</h1>
-        </div>
-    )
+export default function Header() {
+  return (
+    <div className="Header">
+      <img src="seedling-solid.svg" alt="" className="seedling" />
+      <h1>Not Your Mothers Recipes</h1>
+    </div>
+  );
 }

@@ -9,3 +9,6 @@ export interface Recipe {
   source: string;
   url: string;
 }
+export interface RandomResults {
+  recipes: Recipe[];
+}
