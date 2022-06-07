@@ -1,5 +1,4 @@
 import { useState, ReactNode } from "react";
-import { createContext } from "react";
 import { Recipe } from "../models/id-model";
 import FavoriteContext from "./FavoriteContext"
 
@@ -34,9 +33,9 @@ const FavoriteContextProvider = ({ children }: Props) => {
 
         // // OR
 		// setOrder((prev) => [...prev.slice(0, index), ...prev.slice(index + 1)]);
-	// };
+	};
 	return (
-		<FavoriteContext.Provider value={{recipes, addRecipe, removeRecipe}}>
+		<FavoriteContext.Provider value={{recipeArray, addRecipe, removeRecipe}}>
 			{children}
 		</FavoriteContext.Provider>
 	);
