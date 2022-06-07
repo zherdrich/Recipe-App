@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .Header h1 {
   color: #e8dfe0;
@@ -20,4 +21,22 @@
   width: 40px;
   height: 40px;
   margin-right: 10px;
+}
+
+.Header button img {
+  width: 10px;
+}
+
+.Header button {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  background-color: #e8dfe0;
+  border: 1px solid #8f5b34;
+  border-radius: 15%;
 }

@@ -8,6 +8,7 @@ import RecipeList from "./RecipeList";
 export default function HomePage() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [mealData, setMealData] = useState<Recipe[]>([]);
+  const [favoritesArray, setFavoritesArray] = useState();
 
   //https://css-tricks.com/run-useeffect-only-once/#aa-the-trick-is-that-useeffect-takes-a-second-parameter
   useEffect(() => {

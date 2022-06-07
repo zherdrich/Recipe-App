@@ -1,0 +1,12 @@
+.EachRecipe .heart {
+    width: 50px;
+    cursor: pointer;
+    filter: grayscale(1)
+}
+
+.Selected {
+    cursor: pointer;
+    max-width: 50px;
+}
+
+/* sometimes when broken, need to use min or max width */

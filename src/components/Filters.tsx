@@ -1,8 +1,14 @@
+import { useState } from "react";
 import "./Filters.css";
 export default function Filters() {
+  const [filteredIntolerences, setFilteredIntolerences] = useState([])
+
+  function arrayPush() {
+    
+  }
   return (
     <div className="filterSection">
-      <input id="vegetarian" type="checkbox" />
+      <input onChange={arrayPush} id="vegetarian" type="checkbox" />
       <label htmlFor="vegetarian">Vegetarian</label>
 
       <input id="dairyfree" type="checkbox" />
