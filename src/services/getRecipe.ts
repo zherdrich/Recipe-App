@@ -3,7 +3,9 @@ import { Results, Recipe, RandomResults } from "../models/id-model";
 
 export default function getRecipes(
   query: string,
-  intolerances?: string[]
+  intolerances?: string[],
+  diet?: string,
+  calories?: number
 ): Promise<Recipe[] | void> {
   return axios
     .get<Results>(`https://api.spoonacular.com/recipes/complexSearch`, {
@@ -13,6 +15,8 @@ export default function getRecipes(
         addRecipeInformation: true,
         query: query,
         intolerances: intolerances?.join(","),
+        diet: diet,
+        maxCalories: calories,
       },
     })
     .then((response) => {

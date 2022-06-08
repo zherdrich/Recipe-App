@@ -11,7 +11,7 @@ export default function RecipeList({ mealData }: RecipeListProps) {
       <h1 className="featuredRecipes">Featured Recipes</h1>
       <div className="recipeItems">
         {mealData.map((recipe, index) => {
-          return <EachRecipe key={index} recipe={recipe} />;
+          return <EachRecipe key={recipe.id} recipe={recipe} />;
         })}
       </div>
     </div>

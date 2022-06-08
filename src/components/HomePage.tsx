@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { delimiter } from "node:path/win32";
+import { useContext, useEffect, useState } from "react";
+import FavoriteContext from "../context/FavoriteContext";
 import { Recipe } from "../models/id-model";
 import getRecipes, { getRandomRecipes } from "../services/getRecipe";
 import Filters from "./Filters";
@@ -9,6 +11,7 @@ export default function HomePage() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [mealData, setMealData] = useState<Recipe[]>([]);
   const [favoritesArray, setFavoritesArray] = useState();
+  const { filters } = useContext(FavoriteContext);
 
   //https://css-tricks.com/run-useeffect-only-once/#aa-the-trick-is-that-useeffect-takes-a-second-parameter
   useEffect(() => {
@@ -20,7 +23,27 @@ export default function HomePage() {
   }, []);
 
   function search() {
-    getRecipes(searchInput).then((data) => {
+    //todo: add calories to this request
+    let intolerances = [];
+    let diet = "";
+    if (filters.dairyfree) {
+      intolerances.push("Dairy");
+    }
+    if (filters.glutenfree) {
+      intolerances.push("Gluten");
+      intolerances.push("Wheat");
+    }
+    if (filters.nutfree) {
+      intolerances.push("Peanut");
+      intolerances.push("Tree Nut");
+    }
+    if (filters.shellfishfree) {
+      intolerances.push("Shellfish");
+    }
+    if (filters.vegetarian) {
+      diet = "vegetarian";
+    }
+    getRecipes(searchInput, intolerances, diet).then((data) => {
       if (data) {
         setMealData(data);
       }

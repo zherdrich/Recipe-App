@@ -1,0 +1,47 @@
+/* General Style */
+
+.wrapper {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.wrapper:hover {
+  transform: scale(1.2);
+}
+
+/* Heart Style */
+.heart {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 50px;
+  left: 50px;
+  border: none;
+  transform: rotate(45deg);
+}
+
+.heart:focus {
+  outline: none;
+}
+
+.right,
+.left {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.right {
+  top: -50%;
+  left: 0;
+}
+
+.left {
+  top: 0;
+  left: -50%;
+}

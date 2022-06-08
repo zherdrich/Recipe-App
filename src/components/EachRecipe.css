@@ -1,12 +1,28 @@
-.EachRecipe .heart {
-    width: 50px;
-    cursor: pointer;
-    filter: grayscale(1)
+.EachRecipe {
+  position: relative;
+  max-width: 50%;
+  max-height: 50%;
+  background-color: #dab6926f;
+  border: 1px solid #75654c;
+  border-radius: 6px;
+  box-shadow: 1px 1px black;
+  margin: 10px;
+  padding: 6px;
+  text-align: center;
 }
 
-.Selected {
-    cursor: pointer;
-    max-width: 50px;
+.EachRecipe > .wrapper {
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
-
-/* sometimes when broken, need to use min or max width */
+.recipeTitle {
+  word-wrap: break-word;
+  max-width: 100%;
+  color: #75654c;
+  font-weight: bold;
+  font-size: 20px;
+}
+.EachRecipe img {
+  max-width: 100%;
+}

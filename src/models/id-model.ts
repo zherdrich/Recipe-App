@@ -20,3 +20,11 @@ export interface Recipe {
 export interface RandomResults {
   recipes: Recipe[];
 }
+
+export interface FilterState {
+  dairyfree: boolean;
+  vegetarian: boolean;
+  glutenfree: boolean;
+  shellfishfree: boolean;
+  nutfree: boolean;
+}
