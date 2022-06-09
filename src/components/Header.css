@@ -52,5 +52,5 @@
   position: relative;
   top: 350px;
   right: 170px;
-
+  display: flex;
 }

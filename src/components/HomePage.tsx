@@ -4,6 +4,7 @@ import FavoriteContext from "../context/FavoriteContext";
 import { Recipe } from "../models/id-model";
 import getRecipes, { getRandomRecipes } from "../services/getRecipe";
 import Filters from "./Filters";
+import Header from "./Header";
 import "./HomePage.css";
 import RecipeList from "./RecipeList";
 
@@ -73,6 +74,7 @@ export default function HomePage() {
       </div>
       <Filters></Filters>
       <RecipeList mealData={mealData}></RecipeList>
+
     </div>
   );
 }

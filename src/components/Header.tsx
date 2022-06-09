@@ -1,6 +1,9 @@
 import { useContext, useState } from "react";
 import FavoriteContext from "../context/FavoriteContext";
+import { Recipe } from "../models/id-model";
 import "./Header.css";
+
+
 
 export default function Header() {
   const [showDiv, setShowDiv] = useState(false)
@@ -12,8 +15,10 @@ export default function Header() {
       <button onClick={() => setShowDiv(true)}>
         <img src="simple-heart-2.svg"/>
       </button>
-      <div className="favoritePage">
-      {favoriteArray.map((recipe, index) => <li key={index}>{recipe.title}</li>)}
+      <div className={showDiv ? "favoritePage" : "No"}>
+      {/* <button onClick={() => setShowDiv(false)} className="exitButton"></button> */}
+      {favoriteArray.map((recipe, index) =>
+       <li key={index}>{recipe.title}<button onClick={() => removeFavorite(recipe.id)}>Hi</button></li>)}
       </div>
     </div>
   );
