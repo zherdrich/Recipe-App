@@ -1,16 +1,29 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./Heart.css";
+import { Recipe } from "../models/id-model";
+import FavoriteContext from "../context/FavoriteContext";
 
-export default function Heart() {
+interface RecipeProps {
+  recipe: Recipe;
+}
+
+export default function Heart({recipe} : RecipeProps) {
   const [selected, setSelected] = useState(false);
+  const {favoriteArray, addFavorite, removeFavorite}=useContext(FavoriteContext)
+  
+  function favoriteFunction () {
+    
+  }
 
   return (
     <div className="wrapper">
       <button
         className="heart"
         style={{ backgroundColor: selected ? "red" : "gray" }}
-        onClick={(e) => {
+        onClick={() => {
+          addFavorite(recipe)
           setSelected(!selected);
+          console.log(favoriteArray)
         }}
       >
         <div

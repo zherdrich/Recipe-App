@@ -4,8 +4,11 @@ import { FilterState, Recipe } from "../models/id-model";
 interface FavoriteContextModel {
   recipeArray: Recipe[];
   filters: FilterState;
+  favoriteArray: Recipe[];
   addRecipe: (recipe: Recipe) => void;
   removeRecipe: (id: number) => void;
+  addFavorite: (recipe: Recipe) => void;
+  removeFavorite: (id: number) => void;
   updateFilter: (
     filter:
       | "dairyfree"
@@ -16,8 +19,10 @@ interface FavoriteContextModel {
   ) => void;
 }
 
+
 const defaultValues: FavoriteContextModel = {
   recipeArray: [],
+  favoriteArray: [],
   filters: {
     dairyfree: false,
     vegetarian: false,
@@ -27,6 +32,8 @@ const defaultValues: FavoriteContextModel = {
   },
   addRecipe: () => {},
   removeRecipe: () => {},
+  addFavorite: () => {},
+  removeFavorite: () => {},
   updateFilter: (
     filter:
       | "dairyfree"

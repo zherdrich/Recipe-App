@@ -9,7 +9,8 @@ interface Props {
 // boilerplate
 const FavoriteContextProvider = ({ children }: Props) => {
   const [recipeArray, setRecipeArray] = useState<Recipe[]>([]);
-  const [filters, setFilters] = useState<FilterState>({
+  const [favoriteArray, setFavoriteArray] = useState<Recipe[]>([]);
+  const [filters, setFilters] = useState<FilterState> ( {
     dairyfree: false,
     vegetarian: false,
     glutenfree: false,
@@ -47,13 +48,32 @@ const FavoriteContextProvider = ({ children }: Props) => {
     copiedRecipeArray.splice(index, 1);
     setRecipeArray(copiedRecipeArray);
   }
+
+  function addFavorite (recipe: Recipe): void {
+    let copiedfavoriteArray = [...favoriteArray];
+    copiedfavoriteArray.push(recipe);
+    setFavoriteArray(copiedfavoriteArray);
+  }
+
+  function removeFavorite (id: number): void {
+    const index: number = favoriteArray.findIndex((recipe) => recipe.id === id);
+    // copies the array
+    let copiedfavoriteArray = [...favoriteArray];
+    // modifies the array
+    copiedfavoriteArray.splice(index, 1);
+    // sets the new array
+    setFavoriteArray(copiedfavoriteArray)
+  }
+  
   return (
     <FavoriteContext.Provider
-      value={{ recipeArray, filters, addRecipe, removeRecipe, updateFilter }}
+      value={{ recipeArray, filters, addRecipe, removeRecipe, updateFilter, favoriteArray, addFavorite, removeFavorite }}
     >
       {children}
     </FavoriteContext.Provider>
   );
 };
+
+
 
 export default FavoriteContextProvider;

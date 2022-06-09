@@ -7,8 +7,9 @@ import FavoriteContextProvider from "./context/FavoriteContextProvider";
 function App() {
   return (
     <div className="App">
-      <Header />
+
       <FavoriteContextProvider>
+        <Header />
         <HomePage />
       </FavoriteContextProvider>
     </div>

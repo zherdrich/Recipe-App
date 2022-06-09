@@ -6,12 +6,13 @@ import Heart from "./Heart";
 interface RecipeProps {
   recipe: Recipe;
 }
+
 export default function EachRecipe({ recipe }: RecipeProps) {
   return (
     <div className="EachRecipe">
       <p className="recipeTitle">{recipe.title}</p>
       <img src={recipe.image} alt="" />
-      <Heart></Heart>
+      <Heart recipe={recipe}></Heart>
     </div>
   );
 }
