@@ -16,18 +16,21 @@
   margin-bottom: 0px;
   text-align: center;
   font-size: 25px;
+  position: absolute;
 }
 .seedling {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  position: absolute;
+  right: 675px;
 }
 
 .Header button img {
   width: 20px;
 }
 
-.Header button {
+.Header .favoritesButton {
   width: 40px;
   height: 25px;
   display: flex;
@@ -41,16 +44,63 @@
   border-radius: 15%;
 }
 
+.exitButton {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
 .favoritePage {
   border: 2px solid black;
   width: 500px;
   height: 500px;
   margin-top: 10px;
   border-radius: 8px;
-  background-color: whitesmoke;
+  background-color: #e0c9b1;
   z-index: 2;
   position: relative;
-  top: 350px;
-  right: 170px;
+  top: 425px;
+  right: 25px;
   display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.No {
+  display: none;
+}
+
+img {
+  width: 20%;
+}
+
+.displayImage {
+  border-radius: 10%;
+}
+
+.favoritesContent {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(141, 155, 106);
+  margin-top: 50px;
+}
+
+.favoriteHeader {
+  left: 125px;
+  color: #e8dfe0;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #8f5b34;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 35px;;
+  position: absolute;
 }

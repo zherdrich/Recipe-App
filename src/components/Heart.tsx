@@ -11,24 +11,33 @@ export default function Heart({recipe} : RecipeProps) {
   const [selected, setSelected] = useState(false);
   const {favoriteArray, addFavorite, removeFavorite}=useContext(FavoriteContext)
   
+  function functionality () {
+    if (selected === true) {
+      setSelected(false)
+      removeFavorite(recipe.id)
+    } else {
+      setSelected(true)
+    }
+  }
+
   return (
     <div className="wrapper">
       <button
         className="heart"
-        style={{ backgroundColor: selected ? "red" : "gray" }}
+        style={{ backgroundColor: selected ? "red" : "grey" }}
         onClick={() => {
           addFavorite(recipe)
-          setSelected(true);
+          functionality();
           console.log(favoriteArray)
         }}
       >
         <div
           className="left"
-          style={{ backgroundColor: selected ? "red" : "gray" }}
+          style={{ backgroundColor: selected ? "red" : "grey" }}
         ></div>
         <div
           className="right"
-          style={{ backgroundColor: selected ? "red" : "gray" }}
+          style={{ backgroundColor: selected ? "red" : "grey" }}
         ></div>
       </button>
     </div>
