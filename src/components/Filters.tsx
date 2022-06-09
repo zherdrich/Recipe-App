@@ -11,7 +11,7 @@ export default function Filters() {
         id="vegetarian"
         type="checkbox"
         checked={filters.vegetarian}
-        onClick={(e) => {
+        onChange={(e) => {
           updateFilter("vegetarian");
         }}
       />
@@ -20,7 +20,7 @@ export default function Filters() {
         id="dairyfree"
         type="checkbox"
         checked={filters.dairyfree}
-        onClick={(e) => {
+        onChange={(e) => {
           updateFilter("dairyfree");
         }}
       />
@@ -29,7 +29,7 @@ export default function Filters() {
         id="glutenfree"
         type="checkbox"
         checked={filters.glutenfree}
-        onClick={(e) => {
+        onChange={(e) => {
           updateFilter("glutenfree");
         }}
       />
@@ -38,7 +38,7 @@ export default function Filters() {
         id="nutfree"
         type="checkbox"
         checked={filters.nutfree}
-        onClick={(e) => {
+        onChange={(e) => {
           updateFilter("nutfree");
         }}
       />
@@ -47,7 +47,7 @@ export default function Filters() {
         id="shellfishfree"
         type="checkbox"
         checked={filters.shellfishfree}
-        onClick={(e) => {
+        onChange={(e) => {
           updateFilter("shellfishfree");
         }}
       />
