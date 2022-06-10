@@ -8,10 +8,12 @@ import Header from "./Header";
 import "./HomePage.css";
 import RecipeList from "./RecipeList";
 
+
 export default function HomePage() {
   const [searchInput, setSearchInput] = useState<string>("");
   const [mealData, setMealData] = useState<Recipe[]>([]);
   const { filters } = useContext(FavoriteContext);
+  const [calories, setCalories] = useState(500);
 
   //https://css-tricks.com/run-useeffect-only-once/#aa-the-trick-is-that-useeffect-takes-a-second-parameter
   useEffect(() => {
@@ -43,7 +45,7 @@ export default function HomePage() {
     if (filters.vegetarian) {
       diet = "vegetarian";
     }
-    getRecipes(searchInput, intolerances, diet).then((data) => {
+    getRecipes(searchInput, intolerances, diet, calories).then((data) => {
       if (data) {
         setMealData(data);
       }
@@ -72,7 +74,7 @@ export default function HomePage() {
           <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </div>
-      <Filters></Filters>
+      <Filters calories={calories} setCalories={setCalories}></Filters>
       <RecipeList mealData={mealData}></RecipeList>
 
     </div>

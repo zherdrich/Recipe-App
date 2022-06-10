@@ -10,6 +10,9 @@ interface RecipeProps {
 export default function EachRecipe({ recipe }: RecipeProps) {
   return (
     <div className="EachRecipe">
+      <div className="RecipeInfo">
+        <p>Recipe Information</p>
+      </div>
       <p className="recipeTitle">{recipe.title}</p>
       <img src={recipe.image} alt="" />
       <Heart recipe={recipe}></Heart>

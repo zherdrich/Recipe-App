@@ -26,3 +26,9 @@
 .EachRecipe img {
   max-width: 100%;
 }
+
+.RecipeInfo {
+  background-color: lime;
+  width: 400px;
+  height: auto;
+}

@@ -6,6 +6,11 @@ interface Props {
   children: ReactNode;
 }
 
+interface Calories {
+  calories: number;
+}
+
+
 // boilerplate
 const FavoriteContextProvider = ({ children }: Props) => {
   const [recipeArray, setRecipeArray] = useState<Recipe[]>([]);
@@ -41,6 +46,8 @@ const FavoriteContextProvider = ({ children }: Props) => {
     setRecipeArray(copiedRecipeArray);
   };
 
+  
+
   function removeRecipe(id: number): void {
     const index: number = recipeArray.findIndex((recipe) => recipe.id === id);
     // copy then modify
@@ -55,6 +62,7 @@ const FavoriteContextProvider = ({ children }: Props) => {
     setFavoriteArray(copiedfavoriteArray);
   }
 
+
   function removeFavorite (id: number): void {
     const index: number = favoriteArray.findIndex((recipe) => recipe.id === id);
     // copies the array
@@ -67,7 +75,7 @@ const FavoriteContextProvider = ({ children }: Props) => {
   
   return (
     <FavoriteContext.Provider
-      value={{ recipeArray, filters, addRecipe, removeRecipe, updateFilter, favoriteArray, addFavorite, removeFavorite }}
+      value={{ recipeArray, filters, addRecipe, removeRecipe, updateFilter, favoriteArray, addFavorite, removeFavorite}}
     >
       {children}
     </FavoriteContext.Provider>

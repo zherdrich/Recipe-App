@@ -1,8 +1,13 @@
 import "./Filters.css";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 
-export default function Filters() {
+interface Props {
+  calories: number;
+  setCalories: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export default function Filters({calories, setCalories}: Props) {
   const { filters, updateFilter } = useContext(FavoriteContext);
 
   return (
@@ -52,7 +57,7 @@ export default function Filters() {
         }}
       />
       <label htmlFor="shellfishfree">Fish/Shellfish Free</label>
-      <input id="calories" type="number" />
+      <input onChange={(e) => setCalories(e.target.valueAsNumber)} id="calories" type="number"/>
       <label htmlFor="calories" placeholder="Max Calories">
         Calories:{" "}
       </label>
