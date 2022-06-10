@@ -21,6 +21,18 @@ export interface RandomResults {
   recipes: Recipe[];
 }
 
+export interface Information {
+  id: number,
+  title: string,
+  sourceUrl: string,
+  servings: string,
+  readyInMinutes: number,
+}
+
+// export interface Ingredients {
+//   extendedIngredients: []
+// }
+
 export interface FilterState {
   dairyfree: boolean;
   vegetarian: boolean;

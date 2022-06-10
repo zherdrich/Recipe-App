@@ -28,7 +28,12 @@
 }
 
 .RecipeInfo {
-  background-color: lime;
-  width: 400px;
-  height: auto;
+  background-color: #dab6926f;
+  width: 300;
+  height: 300px;
+  z-index: 100;
+}
+
+.no {
+  display: none;
 }

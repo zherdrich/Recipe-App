@@ -55,7 +55,6 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <div className="searchBar">
-        <p>{calories}</p>
         <input
           className="search"
           id="searchbar"
