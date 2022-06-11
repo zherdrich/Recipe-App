@@ -26,7 +26,7 @@ export default function Header() {
       <div className={showDiv ? "favoritePage" : "No"}>
         <h2 className="favoriteHeader">Favorite Recipes</h2>
         <button onClick={() => setShowDiv(false)} className="exitButton">
-          <img src="xmark-solid.svg" />
+          <img className="xbtnfav" src="xmark-solid.svg" />
         </button>
         {favoriteArray.map((recipe, index) => (
           <li className="favoritesContent" key={index}>

@@ -23,35 +23,39 @@ export default function EachRecipe({ recipe }: RecipeProps) {
   //   }
   // })
 
-  useEffect(() => {
-    getInfo(recipe.id).then((data) => {
-      if (data) {
-        setData(data);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   getInfo(recipe.id).then((data) => {
+  //     if (data) {
+  //       setData(data);
+  //     }
+  //   });
+  // }, []);
 
   return (
-    <div className="EachRecipe">
-
-      <button onClick={() => setShowDiv(true)} className="MoreInfoBtn">More Info</button>
-
+    <div className="EachItem">
       <div className={showDiv ? "RecipeInfo" : "no"}>
+        <button id="xbuttonall" onClick={() => setShowDiv(false)} className="exitButtonRecipe">
+          <img className="xbtnrecipe" id="xbtnid" src="xmark-solid.svg" />
+        </button>
+      <div className="InsideInfo">
+        <a id="recipelink" href={recipe.sourceUrl} target="_blank">Click here for recipe</a>
         <p>{recipe.title}</p>
         <button onClick={() => {
           console.log(data)
         }}></button>
         <p>Servings: {recipe.servings}</p>
         <p>Ready in: {recipe.readyInMinutes}</p>
-        <a href={recipe.sourceUrl} target="_blank">Click here for recipe information</a>
-        <button onClick={() => setShowDiv(false)} className="exitButton">
-          <img src="xmark-solid.svg" />
-        </button>
       </div>
+      </div>
+    <div className="EachRecipe">
 
+      <button onClick={() => setShowDiv(true)} className="MoreInfoBtn">More Info</button>
+      <div className="insideBox">
       <p className="recipeTitle">{recipe.title}</p>
-      <img src={recipe.image} alt="" />
+      <img className="recipeImage" src={recipe.image} alt="" />
       <Heart recipe={recipe}></Heart>
+      </div>
+    </div>
     </div>
   );
 }

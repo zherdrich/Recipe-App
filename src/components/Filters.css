@@ -4,4 +4,10 @@
   width: 100vw;
   margin: auto;
   text-align: center;
+  word-wrap: break-word;
+
+}
+
+.calorieBar {
+  width: 60px
 }

@@ -1,37 +1,110 @@
+.insideBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+}
+
 .EachRecipe {
-  position: relative;
-  max-width: 30%;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
   max-height: 50%;
   background-color: #dab6926f;
   border: 1px solid #75654c;
   border-radius: 6px;
   box-shadow: 1px 1px black;
-  margin: 10px;
+  margin: 10px auto;
   padding: 6px;
   text-align: center;
 }
+
+
+.exitButtonRecipe {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  right: 0;
+}
+
+
+
+.EachItem {
+  width: 500px;
+}
+
 
 .EachRecipe > .wrapper {
   position: absolute;
   top: 30%;
   left: 30%;
 }
+
+
 .recipeTitle {
   word-wrap: break-word;
   max-width: 100%;
   color: #75654c;
+  width: 75%;
   font-weight: bold;
   font-size: 20px;
 }
-.EachRecipe img {
-  max-width: 100%;
+
+.recipeImage {
+  max-width: 300px;
 }
 
 .RecipeInfo {
-  background-color: #dab6926f;
-  width: 300;
-  height: 300px;
+  background-color: hsla(30, 49%, 71%, 1.0);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  margin-left: 100px;
   z-index: 100;
+  padding: 5px;
+  border-radius: 7px;
+  box-shadow: grey 7px 7px 25px;
+}
+
+#recipelink {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 260px; */
+  bottom: 190px;
+  
+}
+
+.InsideInfo {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  position: absolute
+}
+
+.xbtnrecipe {
+  width: 50px;
+}
+
+#xbtnid {
+  width: 20px;
+}
+
+#xbuttonall {
+  position: absolute;
+  left: 261px;
+  top: 14px;
 }
 
 .no {

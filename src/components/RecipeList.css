@@ -13,9 +13,10 @@
 .recipeItems {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 .recipeItems img {
-  width: 300px;
+  width: 200px;
   margin-bottom: 10px;
 }
