@@ -1,9 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import FavoriteContext from "../context/FavoriteContext";
 import { Recipe } from "../models/id-model";
+import getInfo from "../services/getInfo";
 import "./Header.css";
 
 export default function Header() {
+
+  // useEffect(() => {
+  //   getInfo(recipe.id).then((data) => {
+  //     if (data) {
+  //       setData(data);
+  //     }
+  //   });
+  // }, []);
+
   const [showDiv, setShowDiv] = useState(false);
   const { favoriteArray, removeFavorite } = useContext(FavoriteContext);
   return (

@@ -12,10 +12,26 @@ export interface Recipe {
   label: string;
   image: string;
   source: string;
+  sourceUrl: string;
   url: string;
   query: string;
   intolerances: string;
+  servings: string,
+  readyInMinutes: number,
+  nutrition: Nutrition,
 }
+
+interface Nutrition {
+  nutrients: NutrientsObject[]
+}
+
+interface NutrientsObject {
+  amount: number,
+  name: string,
+  percentOfDailyNeeds: number,
+  unit: string,
+}
+
 
 export interface RandomResults {
   recipes: Recipe[];
