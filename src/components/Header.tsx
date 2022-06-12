@@ -32,15 +32,16 @@ export default function Header() {
         {favoriteArray.map((recipe, index) => (
           <li className="favoritesContent" key={index}>
             {recipe.title}
-            <img onClick={() => {
-              setShowFavoritesInfoDiv(true)
-            }} className="displayImage" src={recipe.image}></img>
+            <img className="displayImage" src={recipe.image}></img>
             <button
               className="deleteButton"
               onClick={() => removeFavorite(recipe.id)}
             >
               <img src="trash-can-solid.svg" />
             </button>
+            <button onClick={() => {
+              setShowFavoritesInfoDiv(true)
+            }}>Click here for more info</button>
           </li>
         ))}
       </div>
