@@ -62,26 +62,19 @@
 }
 
 .RecipeInfo {
-  background-color: hsla(30, 49%, 71%, 1.0);
+  background-color: rgb(220, 197, 174);
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 300px;
-  height: 350px;
-  margin-left: 100px;
+  height: 310px;
+  margin-left: 90px;
   z-index: 100;
   padding: 5px;
   border-radius: 7px;
   box-shadow: grey 7px 7px 25px;
 }
 
+
 #recipelink {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   /* width: 260px; */
   bottom: 190px;
   
@@ -109,4 +102,19 @@
 
 .no {
   display: none;
+}
+
+.recipeInfoTitle {
+  margin-top: 0;
+  word-wrap: break-word;
+  max-width: 100%;
+  color: #75654c;
+  width: 75%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.moreInfoText {
+  padding-top: 15px;
+  
 }

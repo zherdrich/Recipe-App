@@ -2,7 +2,6 @@
   background-color: #8d9b6a;
   height: 60px;
   width: 100vw;
-  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,15 +54,15 @@
 
 .favoritePage {
   border: 2px solid black;
-  width: 500px;
-  height: 500px;
+  width: 380px;
+  height: 450px;
   margin-top: 10px;
   border-radius: 8px;
-  background-color: #e0c9b1;
+  background-color: rgb(220, 197, 174);
   z-index: 2;
   position: relative;
   top: 425px;
-  right: 25px;
+  right: 0px;
   display: flex;
   list-style-type: none;
   flex-direction: column;
@@ -96,7 +95,7 @@ img {
 
 
 .favoriteHeader {
-  left: 125px;
+  left: 70px;
   color: #e8dfe0;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #8f5b34;
@@ -143,24 +142,21 @@ img {
   max-width: 300px;
 }
 
-.RecipeInfo {
-  background-color: hsla(30, 49%, 71%, 1.0);
+.RecipeInfoAnother {
+  background-color: rgb(220, 197, 174);
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  top: 285px;
+  right: 30px;
   width: 300px;
-  height: 350px;
-  margin-left: 100px;
+  height: 310px;
+  margin-left: 115px;
   z-index: 100;
   padding: 5px;
   border-radius: 7px;
   box-shadow: grey 7px 7px 25px;
-  margin-top: 800px;
-  margin-right: 150px;
 }
 
-#recipelink {
+#recipelinkAnother {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -171,26 +167,24 @@ img {
   
 }
 
-.InsideInfo {
-  margin-top: 0px;
-  margin-bottom: 15px;
-  position: absolute
-}
-
-.xbtnrecipe {
+.xbtnrecipeAnother {
   width: 50px;
 }
 
-#xbtnid {
+#xbtnidAnother {
   width: 20px;
 }
 
-#xbuttonall {
+#xbuttonallAnother {
   position: absolute;
   left: 261px;
   top: 14px;
 }
 
-.no {
+.noAnother {
   display: none;
+}
+
+li {
+  list-style-type: none;
 }

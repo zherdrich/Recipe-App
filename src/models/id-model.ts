@@ -18,20 +18,10 @@ export interface Recipe {
   intolerances: string;
   servings: string,
   readyInMinutes: number,
-  nutrition: Nutrition,
+  summary: string,
+  vegetarian: boolean,
+  vegan: boolean,
 }
-
-interface Nutrition {
-  nutrients: NutrientsObject[]
-}
-
-interface NutrientsObject {
-  amount: number,
-  name: string,
-  percentOfDailyNeeds: number,
-  unit: string,
-}
-
 
 export interface RandomResults {
   recipes: Recipe[];
