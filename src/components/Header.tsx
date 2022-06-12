@@ -16,6 +16,7 @@ export default function Header() {
 
   const [showDiv, setShowDiv] = useState(false);
   const { favoriteArray, removeFavorite } = useContext(FavoriteContext);
+  const [showFavoritesInfo, setShowFavoritesInfoDiv] = useState(false)
   return (
     <div className="Header">
       <img src="seedling-solid.svg" alt="" className="seedling" />
@@ -31,13 +32,29 @@ export default function Header() {
         {favoriteArray.map((recipe, index) => (
           <li className="favoritesContent" key={index}>
             {recipe.title}
-            <img className="displayImage" src={recipe.image}></img>
+            <img onClick={() => {
+              setShowFavoritesInfoDiv(true)
+            }} className="displayImage" src={recipe.image}></img>
             <button
               className="deleteButton"
               onClick={() => removeFavorite(recipe.id)}
             >
               <img src="trash-can-solid.svg" />
             </button>
+          </li>
+        ))}
+      </div>
+      <div className={showFavoritesInfo ? "RecipeInfo" : "no"}>
+        <button id="xbuttonall" onClick={() => setShowFavoritesInfoDiv(false)} className="exitButtonRecipe">
+          <img className="xbtnrecipe" id="xbtnid" src="xmark-solid.svg" />
+        </button>
+        {favoriteArray.map((recipe, index) => (
+          <li key={index}>
+            <p>{recipe.title}</p>
+            <p>Hi</p>
+            <a id="recipelink" href={recipe.sourceUrl} target="_blank">Click here for recipe</a>
+            <p>Servings: {recipe.servings}</p>
+            <p>Ready in: {recipe.readyInMinutes}</p>
           </li>
         ))}
       </div>

@@ -106,3 +106,91 @@ img {
   font-size: 35px;;
   position: absolute;
 }
+
+.exitButtonRecipe {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  right: 0;
+}
+
+
+
+.EachItem {
+  width: 500px;
+}
+
+
+.EachRecipe > .wrapper {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+
+.recipeTitle {
+  word-wrap: break-word;
+  max-width: 100%;
+  color: #75654c;
+  width: 75%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.recipeImage {
+  max-width: 300px;
+}
+
+.RecipeInfo {
+  background-color: hsla(30, 49%, 71%, 1.0);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 350px;
+  margin-left: 100px;
+  z-index: 100;
+  padding: 5px;
+  border-radius: 7px;
+  box-shadow: grey 7px 7px 25px;
+  margin-top: 800px;
+  margin-right: 150px;
+}
+
+#recipelink {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 260px; */
+  bottom: 190px;
+  
+}
+
+.InsideInfo {
+  margin-top: 0px;
+  margin-bottom: 15px;
+  position: absolute
+}
+
+.xbtnrecipe {
+  width: 50px;
+}
+
+#xbtnid {
+  width: 20px;
+}
+
+#xbuttonall {
+  position: absolute;
+  left: 261px;
+  top: 14px;
+}
+
+.no {
+  display: none;
+}
