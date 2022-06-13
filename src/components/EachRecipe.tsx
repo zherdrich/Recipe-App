@@ -32,6 +32,7 @@ export default function EachRecipe({ recipe }: RecipeProps) {
   // }, []);
 
   return (
+    <div className="grid-container-element">
     <div className="EachItem">
       <div className={showDiv ? "RecipeInfo" : "no"}>
         <button
@@ -64,6 +65,7 @@ export default function EachRecipe({ recipe }: RecipeProps) {
           <Heart recipe={recipe}></Heart>
         </div>
       </div>
+    </div>
     </div>
   );
 }
