@@ -34,8 +34,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 3px;
+  position: relative;
+  left: 250px;
   bottom: 3px;
   background-color: #e8dfe0;
   border: 1px solid #8f5b34;
