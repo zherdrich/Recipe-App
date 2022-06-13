@@ -18,7 +18,7 @@ export default function Header() {
   const [showFavoritesInfo, setShowFavoritesInfoDiv] = useState(false);
   return (
     <div className="Header">
-      <img src="seedling-solid.svg" alt="" className="seedling" />
+      
       <h1>Not Your Mothers Recipes</h1>
       <button className="favoritesButton" onClick={() => setShowDiv(true)}>
         <img src="simple-heart-2.svg" />
@@ -33,17 +33,17 @@ export default function Header() {
             {recipe.title}
             <img className="displayImage" src={recipe.image}></img>
             <button
-              className="deleteButton"
-              onClick={() => removeFavorite(recipe.id)}
-            >
-              <img src="trash-can-solid.svg" />
-            </button>
-            <button
               onClick={() => {
                 setShowFavoritesInfoDiv(true);
               }}
             >
               Click here for more info
+            </button>
+            <button
+              className="deleteButton"
+              onClick={() => removeFavorite(recipe.id)}
+            >
+              <img src="trash-can-solid.svg" />
             </button>
           </li>
         ))}

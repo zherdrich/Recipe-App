@@ -22,6 +22,7 @@
   height: 40px;
   position: relative;
   left: 200px;
+  display: none;
 }
 
 .Header button img {
@@ -34,8 +35,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: 250px;
+  position: absolute;
+  right: 15px;
   bottom: 3px;
   background-color: #e8dfe0;
   border: 1px solid #8f5b34;
@@ -49,6 +50,11 @@
   align-items: center;
   /* position: absolute; */
   right: 0;
+}
+
+.displayImage {
+  width: 150px;
+  margin: 10px;
 }
 
 .favoritePage {
@@ -153,6 +159,7 @@ img {
   padding: 5px;
   border-radius: 7px;
   box-shadow: grey 7px 7px 25px;
+  overflow: scroll;
 }
 
 #recipelinkAnother {
@@ -186,4 +193,10 @@ img {
 
 li {
   list-style-type: none;
+}
+
+@media screen and (min-width: 1300px) {
+  .RecipeInfoAnother {
+    right: 510px;
+  }
 }
